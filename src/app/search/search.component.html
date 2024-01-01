@@ -1,0 +1,9 @@
+<div>
+    <img src="assets/meeple.svg" alt="meeple" width="25px">
+    <h3>Search Pieces</h3>
+    <input type="text" placeholder="Search by shape">
+</div>
+<div class="results">
+    <app-tile *ngFor="let tile of tileList" [tile]="tile"></app-tile>
+    <!-- <app-tile [tile]="tile"></app-tile> -->
+</div>

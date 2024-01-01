@@ -1,0 +1,8 @@
+.results{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    background-color: white;
+    column-gap: 10px;
+    row-gap: 2px;
+    justify-content: space-around;
+}
