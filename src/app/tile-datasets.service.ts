@@ -320,6 +320,13 @@ export class TileDatasetsService {
       stringRep: 'This is a tile',
       monastery: false,
       shield: false
+    },
+    {
+      sides: 'CSRS',
+      image: 'River_I_C2_Tile_B.jpg',
+      stringRep: 'This is a tile',
+      monastery: false,
+      shield: false
     }
   ]
 
