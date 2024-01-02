@@ -16,13 +16,23 @@ export class SearchComponent {
   tileList : Tile[] = [];
   tileFinderService : TileFinderService = inject(TileFinderService);
   sidesSearch : string = '';
+  searchMessage : string = '';
 
   constructor() {
     this.tileList = this.tileFinderService.fullTileList;
   }
 
   searchBySides() {
-    this.sidesSearch = this.sidesSearch.toUpperCase();
-    this.tileList = this.tileFinderService.findTilesBySides(this.sidesSearch);
+    if (this.sidesSearch.length === 0){
+      this.tileList = this.tileFinderService.fullTileList;
+      this.generateSearchMessage();
+      return;
+    }
+    this.tileList = this.tileFinderService.findTilesBySides(this.sidesSearch.toUpperCase());
+    this.generateSearchMessage();
+  }
+
+  generateSearchMessage(){
+    this.searchMessage = this.tileList.length + " tiles found with sides \"" + this.sidesSearch.toUpperCase() + "\".";
   }
 }

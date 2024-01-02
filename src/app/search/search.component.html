@@ -4,6 +4,7 @@
     <input type="text" [(ngModel)]="sidesSearch" (input)="searchBySides()" placeholder="Search by shape">
 </div>
 <div class="results">
+    <p [innerHTML]="searchMessage"></p>
     <app-tile *ngFor="let tile of tileList" [tile]="tile"></app-tile>
     <!-- <app-tile [tile]="tile"></app-tile> -->
 </div>
