@@ -19,12 +19,10 @@ export class SearchComponent {
 
   constructor() {
     this.tileList = this.tileFinderService.fullTileList;
-    console.log(this.tileList); 
   }
 
   searchBySides() {
     this.sidesSearch = this.sidesSearch.toUpperCase();
     this.tileList = this.tileFinderService.findTilesBySides(this.sidesSearch);
-    console.log(this.tileList);
   }
 }
