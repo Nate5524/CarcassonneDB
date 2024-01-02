@@ -33,6 +33,9 @@ export class SearchComponent {
   }
 
   generateSearchMessage(){
-    this.searchMessage = this.tileList.length + " tiles found with sides \"" + this.sidesSearch.toUpperCase() + "\".";
+    this.searchMessage = this.tileList.length + " tiles found";
+    if(this.sidesSearch.length > 0){
+    this.searchMessage += "with sides \"" + this.sidesSearch.toUpperCase() + "\".";
+    }
   }
 }
