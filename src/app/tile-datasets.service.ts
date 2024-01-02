@@ -327,6 +327,76 @@ export class TileDatasetsService {
       stringRep: 'This is a tile',
       monastery: false,
       shield: false
+    },
+    {
+      sides: 'CSCS',
+      image: 'River_I_C2_Tile_C.jpg',
+      stringRep: 'This is a tile',
+      monastery: false,
+      shield: false
+    },
+    {
+      sides: 'SFSF',
+      image: 'River_I_C2_Tile_D.jpg',
+      stringRep: 'This is a tile',
+      monastery: false,
+      shield: false
+    },
+    {
+      sides: 'CCSS',
+      image: 'River_I_C2_Tile_E.jpg',
+      stringRep: 'This is a tile',
+      monastery: false,
+      shield: false
+    },
+    {
+      sides: 'SFSF',
+      image: 'River_I_C2_Tile_F.jpg',
+      stringRep: 'This is a tile',
+      monastery: false,
+      shield: false
+    },
+    {
+      sides: 'SFFS',
+      image: 'River_I_C2_Tile_G.jpg',
+      stringRep: 'This is a tile',
+      monastery: false,
+      shield: false
+    },
+    {
+      sides: 'FSRS',
+      image: 'River_I_C2_Tile_H.jpg',
+      stringRep: 'This is a tile',
+      monastery: true,
+      shield: false
+    },
+    {
+      sides: 'RSSR',
+      image: 'River_I_C2_Tile_I.jpg',
+      stringRep: 'This is a tile',
+      monastery: false,
+      shield: false
+    },
+    {
+      sides: 'FSSF',
+      image: 'River_I_C2_Tile_J.jpg',
+      stringRep: 'This is a tile',
+      monastery: false,
+      shield: false
+    },
+    {
+      sides: 'SRSR',
+      image: 'River_I_C2_Tile_K.jpg',
+      stringRep: 'This is a tile',
+      monastery: false,
+      shield: false
+    },
+    {
+      sides: 'SFFF',
+      image: 'River_I_C2_Tile_L.jpg',
+      stringRep: 'This is a tile',
+      monastery: false,
+      shield: false
     }
   ]
 
