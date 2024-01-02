@@ -17,7 +17,7 @@ get fullTileList() : Tile[]{
     let data : TileDatasetsService = new TileDatasetsService();
     // Update for dynamic generation
     this.tileList = data.riverIC2Tiles();
-    // this.tileList = this.tileList.concat(data.baseC3Tiles());
-    // this.tileList = this.tileList.concat(data.innsAndCathedralsC3Tiles());
+    this.tileList = this.tileList.concat(data.baseC3Tiles());
+    this.tileList = this.tileList.concat(data.innsAndCathedralsC3Tiles());
   }
 }
