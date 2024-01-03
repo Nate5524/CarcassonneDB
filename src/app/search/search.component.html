@@ -1,5 +1,12 @@
 <div>
     <img src="assets/meeple.svg" alt="meeple" width="25px">
+    <!-- <select [(ngModel)]="selectedExpansion" (input)="addExpansion()">
+        TODO: - also could be checkboxes in a dropdown
+        <option value="">Pack Selector</option>
+        <option value="BaseC3">Base Game (C3 Print)</option>
+        <option value="RiverIC2">River I (C2 Print)</option>
+        <option value="Inns&CathsC3">Inns & Cathedrals (C3 Print)</option>
+    </select> -->
     <h3>Search Pieces</h3>
     <input type="text" [(ngModel)]="sidesSearch" (input)="applySearch()" placeholder="Search by shape" maxlength="4"/>
     <input type="checkbox" [(ngModel)]="monasterySearch" (change)="applySearch()" id="monasterySearch"/>

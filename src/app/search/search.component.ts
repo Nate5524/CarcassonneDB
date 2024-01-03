@@ -23,12 +23,17 @@ export class SearchComponent {
   shieldSearch : boolean = false;
 
   constructor() {
+    this.generateListFromExpansions();
+  }
+
+  generateListFromExpansions(){
+    //TODO:
     this.tileList = this.tileFinderService.fullTileList;
   }
 
   searchBySides() {
     if (this.sidesSearch.length === 0){
-      this.tileList = this.tileFinderService.fullTileList;
+      this.generateListFromExpansions();
       return;
     }
     this.tileList = this.tileFinderService.findTilesBySides(this.sidesSearch.toUpperCase());
