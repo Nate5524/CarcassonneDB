@@ -15,8 +15,12 @@ import { FormsModule } from '@angular/forms';
 export class SearchComponent {
   tileList : Tile[] = [];
   tileFinderService : TileFinderService = inject(TileFinderService);
-  sidesSearch : string = '';
   searchMessage : string = '';
+
+  // Search parameters
+  sidesSearch : string = '';
+  monasterySearch : boolean = false;
+  shieldSearch : boolean = false;
 
   constructor() {
     this.tileList = this.tileFinderService.fullTileList;
@@ -25,17 +29,56 @@ export class SearchComponent {
   searchBySides() {
     if (this.sidesSearch.length === 0){
       this.tileList = this.tileFinderService.fullTileList;
-      this.generateSearchMessage();
       return;
     }
     this.tileList = this.tileFinderService.findTilesBySides(this.sidesSearch.toUpperCase());
+  }
+
+  searchForMonastery(){
+    let tempList : Tile[] = [];
+    for(let tile of this.tileList){
+      if(tile.monastery){
+        tempList.push(tile);
+      }
+    }
+    this.tileList = tempList;
+  }
+
+  searchForShield(){
+    let tempList : Tile[] = [];
+    for(let tile of this.tileList){
+      if(tile.shield){
+        tempList.push(tile);
+      }
+    }
+    this.tileList = tempList;
+  }
+
+  applySearch(){
+    this.searchBySides();
+    if(this.monasterySearch){
+      this.searchForMonastery();
+    }
+    if(this.shieldSearch){
+      this.searchForShield();
+    }
     this.generateSearchMessage();
   }
 
   generateSearchMessage(){
     this.searchMessage = this.tileList.length + " tiles found";
     if(this.sidesSearch.length > 0){
-    this.searchMessage += "with sides \"" + this.sidesSearch.toUpperCase() + "\".";
+    this.searchMessage += " with sides \"" + this.sidesSearch + "\"";
     }
+    if(this.monasterySearch){
+      this.searchMessage += " with monasteries";
+    }
+    if(this.shieldSearch){
+      this.searchMessage += " with shields";
+    }
+  }
+
+  clearSearch(){
+    //TODO:
   }
 }
