@@ -21,6 +21,11 @@ export interface Tile {
     inn?: boolean;
     cathedral?: boolean;
 
+    // Expansion 2:
+    wheat?: boolean;
+    wine?: boolean;
+    cloth?: boolean;
+
     // Only matter if a game is being tracked
     // numInGame: number;
     // numInBag: number;

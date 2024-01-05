@@ -18,6 +18,7 @@ export class TileFinderService {
     this.tileList = data.riverIC2Tiles();
     this.tileList = this.tileList.concat(data.baseC3Tiles());
     this.tileList = this.tileList.concat(data.innsAndCathedralsC3Tiles());
+    this.tileList = this.tileList.concat(data.tradersAndBuildersC3Tiles());
   }
 
   findTilesBySides(search: string): Tile[] {
