@@ -8,7 +8,7 @@ The goal of this project is to provide a useful tool for players of the board ga
 ### Current Data
 Tile images are sourced from the lists provided on [the Carcassonne game wiki](https://wikicarpedia.com/car/Main_Page). All of it was entered by hand, so if you see any errors, please let me know so I can fix them. 
 
-The current data (as of 1/1/24) consists of data from 3 unique packs (base game c3 printing, inns and cathedrals expansion c3 printing, and the river 1 expansion c2 printing). These are tedious to update, but more will hopefully be added in the future, especially as my personal collection of expansions grows and more are relevant to my own play.
+The current data (as of 1/4/24) consists of data from 4 unique packs (base game c3 printing, inns and cathedrals expansion c3 printing, the river 1 expansion c2 printing, and traders & builders expansion c3 printing). These are tedious to update, but more will hopefully be added in the future, especially as my personal collection of expansions grows and more are relevant to my own play.
 
 ### Tile Search Engine
 With all of the various tiles in the game, it's useful to have a way to search for certain traits. The seach engine will have functionality to search based on the features on the edges of a tile, as well as some filters based on what content the tile contains.
