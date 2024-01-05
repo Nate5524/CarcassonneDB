@@ -21,6 +21,9 @@ export class SearchComponent {
   sidesSearch : string = '';
   monasterySearch : boolean = false;
   shieldSearch : boolean = false;
+  // Inns and Cathedrals
+  innSearch : boolean = false;
+  cathedralSearch : boolean = false;
   // Traders and Builders
   wheatSearch : boolean = false;
   clothSearch : boolean = false;
@@ -57,6 +60,26 @@ export class SearchComponent {
     let tempList : Tile[] = [];
     for(let tile of this.tileList){
       if(tile.shield){
+        tempList.push(tile);
+      }
+    }
+    this.tileList = tempList;
+  }
+
+  searchForInn(){
+    let tempList : Tile[] = [];
+    for(let tile of this.tileList){
+      if(tile.inn){
+        tempList.push(tile);
+      }
+    }
+    this.tileList = tempList;
+  }
+
+  searchForCathedral(){
+    let tempList : Tile[] = [];
+    for(let tile of this.tileList){
+      if(tile.cathedral){
         tempList.push(tile);
       }
     }
@@ -101,6 +124,12 @@ export class SearchComponent {
     if(this.shieldSearch){
       this.searchForShield();
     }
+    if(this.innSearch){
+      this.searchForInn();
+    }
+    if(this.cathedralSearch){
+      this.searchForCathedral();
+    }
     if(this.wheatSearch){
       this.searchForWheat();
     }
@@ -123,6 +152,12 @@ export class SearchComponent {
     }
     if(this.shieldSearch){
       this.searchMessage += " with shields";
+    }
+    if(this.innSearch){
+      this.searchMessage += " with inns";
+    }
+    if(this.cathedralSearch){
+      this.searchMessage += " with cathedrals";
     }
     if(this.wheatSearch){
       this.searchMessage += " with wheat";
