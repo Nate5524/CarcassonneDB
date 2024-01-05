@@ -45,3 +45,23 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ### Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+# TODO ITEMS
+* Fully text-based searching
+    * "How to" page for searching
+    * "OR" in search terms
+    * parentheses for order of operations
+    * strings and abbreviated strings as params
+    * Remove/label checkboxes
+* New data
+    * gardens (make mandatory through tile interface)
+    * tile quantity (mandatory)
+    * minor tile variations (non-mandatory)
+* Tile information pages
+* Game tracking
+    * score trackers
+    * resource tracking
+    * game creation based on selected expansions
+    * page explaining difference in C1, C2, and C3
+    * tile use checking "counting cards"
