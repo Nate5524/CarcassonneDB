@@ -11,6 +11,9 @@
     <input type="text" [(ngModel)]="sidesSearch" (input)="applySearch()" placeholder="Search by shape" maxlength="4"/>
     <input type="checkbox" [(ngModel)]="monasterySearch" (change)="applySearch()" id="monasterySearch"/>
     <input type="checkbox" [(ngModel)]="shieldSearch" (change)="applySearch()" id="shieldSearch"/>
+    <input type="checkbox" [(ngModel)]="wheatSearch" (change)="applySearch()" id="wheatSearch"/>
+    <input type="checkbox" [(ngModel)]="clothSearch" (change)="applySearch()" id="clothSearch"/>
+    <input type="checkbox" [(ngModel)]="wineSearch" (change)="applySearch()" id="wineSearch"/>
 </div>
 <div class="results">
     <p [innerHTML]="searchMessage"></p>

@@ -21,6 +21,10 @@ export class SearchComponent {
   sidesSearch : string = '';
   monasterySearch : boolean = false;
   shieldSearch : boolean = false;
+  // Traders and Builders
+  wheatSearch : boolean = false;
+  clothSearch : boolean = false;
+  wineSearch : boolean = false;
 
   constructor() {
     this.generateListFromExpansions();
@@ -59,6 +63,36 @@ export class SearchComponent {
     this.tileList = tempList;
   }
 
+  searchForWheat(){
+    let tempList : Tile[] = [];
+    for(let tile of this.tileList){
+      if(tile.wheat){
+        tempList.push(tile);
+      }
+    }
+    this.tileList = tempList;
+  }
+
+  searchForCloth(){
+    let tempList : Tile[] = [];
+    for(let tile of this.tileList){
+      if(tile.cloth){
+        tempList.push(tile);
+      }
+    }
+    this.tileList = tempList;
+  }
+
+  searchForWine(){
+    let tempList : Tile[] = [];
+    for(let tile of this.tileList){
+      if(tile.wine){
+        tempList.push(tile);
+      }
+    }
+    this.tileList = tempList;
+  }
+
   applySearch(){
     this.searchBySides();
     if(this.monasterySearch){
@@ -66,6 +100,15 @@ export class SearchComponent {
     }
     if(this.shieldSearch){
       this.searchForShield();
+    }
+    if(this.wheatSearch){
+      this.searchForWheat();
+    }
+    if(this.clothSearch){
+      this.searchForCloth();
+    }
+    if(this.wineSearch){
+      this.searchForWine();
     }
     this.generateSearchMessage();
   }
@@ -80,6 +123,15 @@ export class SearchComponent {
     }
     if(this.shieldSearch){
       this.searchMessage += " with shields";
+    }
+    if(this.wheatSearch){
+      this.searchMessage += " with wheat";
+    }
+    if (this.clothSearch){
+      this.searchMessage += " with cloth";
+    }
+    if (this.wineSearch){
+      this.searchMessage += " with wine";
     }
   }
 
