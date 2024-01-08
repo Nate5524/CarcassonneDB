@@ -10,88 +10,142 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [TileComponent, CommonModule, FormsModule],
   templateUrl: './search.component.html',
-  styleUrl: './search.component.css'
+  styleUrl: './search.component.css',
 })
 export class SearchComponent {
-  tileList : Tile[] = [];
-  tileFinderService : TileFinderService = inject(TileFinderService);
-  searchMessage : string = '';
+  tileList: Tile[] = [];
+  tileFinderService: TileFinderService = inject(TileFinderService);
+  searchMessage: string = '';
 
   // Search parameters
-  stringSearch : string = '';
-  sidesSearch : string = '';
-  monasterySearch : boolean = false;
-  shieldSearch : boolean = false;
+  stringSearch: string = '';
+  sidesSearch: string = '';
+  monasterySearch: boolean = false;
+  shieldSearch: boolean = false;
   // Inns and Cathedrals
-  innSearch : boolean = false;
-  cathedralSearch : boolean = false;
+  innSearch: boolean = false;
+  cathedralSearch: boolean = false;
   // Traders and Builders
-  wheatSearch : boolean = false;
-  clothSearch : boolean = false;
-  wineSearch : boolean = false;
+  wheatSearch: boolean = false;
+  clothSearch: boolean = false;
+  wineSearch: boolean = false;
 
   constructor() {
     this.tileList = this.generateListFromExpansions();
   }
 
-  generateListFromExpansions(): Tile[]{
+  generateListFromExpansions(): Tile[] {
     //TODO:
     return this.tileFinderService.fullTileList;
   }
 
-  searchByStringParams(){
-    let includedTiles : Tile[] = this.generateListFromExpansions();
-    if (this.stringSearch.length === 0){
+  searchByStringParams() {
+    let includedTiles: Tile[] = this.generateListFromExpansions();
+    if (this.stringSearch.length === 0) {
       this.tileList = includedTiles;
       return;
     }
+    let str = this.stringSearch.toUpperCase();
+    //parse string
+    //calculate order of operations - or means add, and means intersect
+    // each or gets a queue of ands, overall list how searching done
+    // remove duplicate search results wdd
+    //unpack queues as operations
+
+    const funcDict = {
+      s: this.searchBySides,
+      sides: this.searchBySides,
+      side: this.searchBySides,
+
+      m: this.searchBooleanTrait,
+      monastery: this.searchBooleanTrait,
+      monasteries: this.searchBooleanTrait,
+
+      i: this.searchBooleanTrait,
+      inn: this.searchBooleanTrait,
+      inns: this.searchBooleanTrait,
+
+      c: this.searchBooleanTrait,
+      cathedral: this.searchBooleanTrait,
+      cathedrals: this.searchBooleanTrait,
+
+      r: this.searchResource,
+      resource: this.searchResource,
+      resources: this.searchResource,
+    };
+
+    for (let i = 0; i < str.length; i++) {
+      switch (str[i]) {
+        case ' ':
+          break;
+        case '(':
+          break;
+        case ')':
+          break;
+        case '|':
+          break;
+        case '&':
+          break;
+        case '!':
+          break;
+        default:
+          break;
+      }
+    }
+  }
+
+  searchResource(wheat: boolean, cloth: boolean, wine: boolean) {
+    //TODO:
   }
 
   searchBySides() {
-    if (this.sidesSearch.length === 0){
+    if (this.sidesSearch.length === 0) {
       this.tileList = this.generateListFromExpansions();
       return;
     }
-    this.tileList = this.tileFinderService.findTilesBySides(this.sidesSearch.toUpperCase());
+    this.tileList = this.tileFinderService.findTilesBySides(
+      this.sidesSearch.toUpperCase()
+    );
   }
 
-  searchBooleanTrait(attribute: keyof Tile){
-    let tempList : Tile[] = [];
-    for(let tile of this.tileList){
-      if(tile[attribute]){
+  searchBooleanTrait(attribute: keyof Tile) {
+    let tempList: Tile[] = [];
+    for (let tile of this.tileList) {
+      if (tile[attribute]) {
         tempList.push(tile);
       }
     }
     this.tileList = tempList;
   }
 
-  applySearch(){
-    this.searchMessage = "";
+  applySearch() {
+    this.searchMessage = '';
     this.searchBySides();
-    if(this.sidesSearch.length > 0){
-      this.searchMessage += " with sides \"" + this.sidesSearch + "\"";
+    if (this.sidesSearch.length > 0) {
+      this.searchMessage += ' with sides "' + this.sidesSearch + '"';
     }
     const boolSearchTraits: any[] = [
-      {attribute: "monastery", search: this.monasterySearch},
-      {attribute: "shield", search: this.shieldSearch},
-      {attribute: "inn", search: this.innSearch},
-      {attribute: "cathedral", search: this.cathedralSearch},
-      {attribute: "wheat", search: this.wheatSearch},
-      {attribute: "cloth", search: this.clothSearch},
-      {attribute: "wine", search: this.wineSearch}
+      { attribute: 'monastery', search: this.monasterySearch },
+      { attribute: 'shield', search: this.shieldSearch },
+      { attribute: 'inn', search: this.innSearch },
+      { attribute: 'cathedral', search: this.cathedralSearch },
+      { attribute: 'wheat', search: this.wheatSearch },
+      { attribute: 'cloth', search: this.clothSearch },
+      { attribute: 'wine', search: this.wineSearch },
     ];
 
-    for (let trait of boolSearchTraits){
-      if (trait.search){
+    for (let trait of boolSearchTraits) {
+      if (trait.search) {
         this.searchBooleanTrait(trait.attribute);
-        this.searchMessage += " with " + trait.attribute;
+        this.searchMessage += ' with ' + trait.attribute;
       }
     }
-    this.searchMessage = this.tileList.length + " tiles found" + this.searchMessage;
+    this.searchMessage =
+      this.tileList.length + ' tiles found' + this.searchMessage;
     return;
   }
 
-  clearSearch(){
+  clearSearch() {
     //TODO:
   }
 }
