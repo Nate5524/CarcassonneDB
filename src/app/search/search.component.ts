@@ -18,6 +18,7 @@ export class SearchComponent {
   searchMessage : string = '';
 
   // Search parameters
+  stringSearch : string = '';
   sidesSearch : string = '';
   monasterySearch : boolean = false;
   shieldSearch : boolean = false;
@@ -30,17 +31,25 @@ export class SearchComponent {
   wineSearch : boolean = false;
 
   constructor() {
-    this.generateListFromExpansions();
+    this.tileList = this.generateListFromExpansions();
   }
 
-  generateListFromExpansions(){
+  generateListFromExpansions(): Tile[]{
     //TODO:
-    this.tileList = this.tileFinderService.fullTileList;
+    return this.tileFinderService.fullTileList;
+  }
+
+  searchByStringParams(){
+    let includedTiles : Tile[] = this.generateListFromExpansions();
+    if (this.stringSearch.length === 0){
+      this.tileList = includedTiles;
+      return;
+    }
   }
 
   searchBySides() {
     if (this.sidesSearch.length === 0){
-      this.generateListFromExpansions();
+      this.tileList = this.generateListFromExpansions();
       return;
     }
     this.tileList = this.tileFinderService.findTilesBySides(this.sidesSearch.toUpperCase());
@@ -75,6 +84,7 @@ export class SearchComponent {
     for (let trait of boolSearchTraits){
       if (trait.search){
         this.searchBooleanTrait(trait.attribute);
+        this.searchMessage += " with " + trait.attribute;
       }
     }
     this.searchMessage = this.tileList.length + " tiles found" + this.searchMessage;

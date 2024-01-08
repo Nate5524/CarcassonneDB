@@ -16,6 +16,7 @@
     <input type="checkbox" [(ngModel)]="wheatSearch" (change)="applySearch()" id="wheatSearch"/>
     <input type="checkbox" [(ngModel)]="clothSearch" (change)="applySearch()" id="clothSearch"/>
     <input type="checkbox" [(ngModel)]="wineSearch" (change)="applySearch()" id="wineSearch"/>
+    <input type="text" [(ngModel)]="stringSearch" (input)="searchByStringParams()" id="stringSearch">
 </div>
 <div class="results">
     <p [innerHTML]="searchMessage"></p>

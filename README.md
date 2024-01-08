@@ -65,5 +65,3 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     * game creation based on selected expansions
     * page explaining difference in C1, C2, and C3
     * tile use checking "counting cards"
-* Code cleanup
-    * copy-paste boolean searches
