@@ -3,7 +3,7 @@
 ## Project summary
 The goal of this project is to provide a useful tool for players of the board game [Carcassonne](https://wikicarpedia.com/car/Main_Page). The idea is to provide both a search engine and game tracker for tiles. It is *not* intended to in any way infringe on the copyright of the original tile/game designs. 
 
-**This is a work in progress  - many features may be missing at this point in time**
+**This is a work in progress  - some features may be missing/incomplete at this point in time**
 
 ### Current Data
 Tile images are sourced from the lists provided on [the Carcassonne game wiki](https://wikicarpedia.com/car/Main_Page). All of it was entered by hand, so if you see any errors, please let me know so I can fix them. 
@@ -54,6 +54,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     * parentheses for order of operations
     * strings and abbreviated strings as params
     * Remove/label checkboxes
+    * advanced search needs order of operations validation (ex. searching "and x" or "x or")
+    * error handling for mismatched parentheses in advanced search
 * New data
     * gardens (make mandatory through tile interface)
     * tile quantity (mandatory)

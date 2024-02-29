@@ -45,54 +45,152 @@ export class SearchComponent {
       this.tileList = includedTiles;
       return;
     }
-    let str = this.stringSearch.toUpperCase();
-    //parse string
-    //calculate order of operations - or means add, and means intersect
-    // each or gets a queue of ands, overall list how searching done
-    // remove duplicate search results wdd
-    //unpack queues as operations
+    this.searchShunted(this.shuntingYard(this.tokenizeSearchString()));
+  }
+  tokenizeSearchString(): string[] {
+    // Tokenize
+    let tokens = this.stringSearch
+      .toLowerCase()
+      .trim()
+      .split(
+        /(\s*\(\s*|\s*\)\s*|\s+and\s+|\s+or\s+|\s*not\s+|\s*&\s*|\s*\|\s*|\s*!\s*|\s+)/
+      );
+    // console.log("Split:");
+    // console.log(tokens);
+    for (let i = 0; i < tokens.length; i++) {
+      tokens[i] = tokens[i].trim();
+    }
+    tokens = tokens.filter((t) => t.length > 0);
 
-    const funcDict = {
-      s: this.searchBySides,
-      sides: this.searchBySides,
-      side: this.searchBySides,
+    // console.log("Filtered split:");
+    // console.log(tokens);
 
-      m: this.searchBooleanTrait,
-      monastery: this.searchBooleanTrait,
-      monasteries: this.searchBooleanTrait,
+    // Add implied 'and' operators
+    let binOps = ['and', 'or', '&', '|'];
+    let allOps = ['and', 'or', '&', '|', 'not', '!'];
+    let temp = [];
+    let lastWasOperator = true;
+    for (let i = 0; i < tokens.length; i++) {
+      if (!lastWasOperator && !binOps.includes(tokens[i])) {
+        temp.push('&');
+      }
+      temp.push(tokens[i]);
+      if (allOps.includes(tokens[i])) {
+        lastWasOperator = true;
+      } else {
+        lastWasOperator = false;
+      }
+    }
+    // console.log('Tokens:');
+    // console.log(temp);
+    return temp;
+  }
 
-      i: this.searchBooleanTrait,
-      inn: this.searchBooleanTrait,
-      inns: this.searchBooleanTrait,
+  shuntingYard(tokens: string[]): string[] {
+    // Parse tokens using shunting yard algorithm
 
-      c: this.searchBooleanTrait,
-      cathedral: this.searchBooleanTrait,
-      cathedrals: this.searchBooleanTrait,
-
-      r: this.searchResource,
-      resource: this.searchResource,
-      resources: this.searchResource,
+    // Define operators and their precedence
+    let precedence: { [key: string]: number } = {
+      '(': -1,
+      ')': -1,
+      '|': 1,
+      or: 1,
+      '&': 2,
+      and: 2,
+      '!': 3,
+      not: 3,
     };
+    let output: string[] = []; //output queue
+    let operators: string[] = []; //operator stack
 
-    for (let i = 0; i < str.length; i++) {
-      switch (str[i]) {
-        case ' ':
-          break;
-        case '(':
-          break;
-        case ')':
-          break;
-        case '|':
-          break;
+    for (let t of tokens) {
+      if (t === '(') {
+        // mark the beginning of a set of parentheses
+        operators.push(t);
+      } else if (t === ')') {
+        if (operators.length === 0) {
+          //TODO: error handling
+          console.log('Mismatched parentheses');
+          return [];
+        }
+        while (operators[operators.length - 1] !== '(') {
+          if (operators.length === 0) {
+            //TODO: error handling
+            console.log('Mismatched parentheses');
+            return [];
+          }
+          // add contents of parentheses to output
+          output.push(operators.pop() as string);
+        }
+        //remove the '(' to prevent errors later
+        operators.pop();
+      } else if (t in precedence) {
+        // t is an operator - add operators with higher precedence to the output
+        while (
+          operators.length > 0 &&
+          precedence[operators[operators.length - 1]] >= precedence[t]
+        ) {
+          output.push(operators.pop() as string);
+        }
+        operators.push(t);
+      } else {
+        // t is an operand
+        output.push(t);
+      }
+    }
+    while (operators.length > 0) {
+      let o = operators.pop();
+      if (o === '(' || o === ')') {
+        //TODO: error handling
+        console.log('Mismatched parentheses');
+        return [];
+      }
+      output.push(o as string);
+    }
+    // console.log("After shunting:");
+    // console.log(output);
+    return output;
+  }
+
+  searchShunted(tokens: string[]) {
+    //TODO: if not enough operands, return error
+    //TODO: must do function evals into sets before the boolean set operations <- bad approach, do the set operations as you go (eg keep searching same set for &, flip it for !, add two existing sets for |)
+    let operands = []; //stack of operands
+    for (let i = 0; i < tokens.length; i++) {
+      switch (tokens[i]) {
+        case 'and':
         case '&':
-          break;
-        case '!':
+          if (operands.length < 2) {
+            //TODO: error
+          }
+          //TODO: and logic
           break;
         default:
-          break;
+          operands.push(tokens[i]);
       }
     }
   }
+  // const funcDict = {
+  //   s: this.searchBySides,
+  //   sides: this.searchBySides,
+  //   side: this.searchBySides,
+
+  //   m: this.searchBooleanTrait,
+  //   monastery: this.searchBooleanTrait,
+  //   monasteries: this.searchBooleanTrait,
+
+  //   i: this.searchBooleanTrait,
+  //   inn: this.searchBooleanTrait,
+  //   inns: this.searchBooleanTrait,
+
+  //   c: this.searchBooleanTrait,
+  //   cathedral: this.searchBooleanTrait,
+  //   cathedrals: this.searchBooleanTrait,
+
+  //   r: this.searchResource,
+  //   resource: this.searchResource,
+  //   resources: this.searchResource,
+  // };
 
   searchResource(wheat: boolean, cloth: boolean, wine: boolean) {
     //TODO:
