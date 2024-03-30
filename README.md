@@ -56,11 +56,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     * Remove/label checkboxes
     * advanced search needs order of operations validation (ex. searching "and x" or "x or")
     * error handling for mismatched parentheses in advanced search
+    * store tiles by expansion in a more easily sortable way, implement more efficient search
 * New data
     * gardens (make mandatory through tile interface)
     * tile quantity (mandatory)
     * minor tile variations (non-mandatory)
 * Tile information pages
+    * is it beneficial for each to track their expansion or too much overhead?
 * Game tracking
     * score trackers
     * resource tracking

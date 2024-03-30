@@ -1,5 +1,9 @@
 export interface Tile {
-    // id: number;
+    // Identifiers
+    expansion: string;
+    expId: number; //Expansion ID - count up from 0 as tiles are added to a set. 
+    //This is a metric I invented to make coding easier, not an inherent part of the game
+
     sides: string;
     image: string;
     stringRep: string;
