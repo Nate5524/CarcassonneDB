@@ -69,24 +69,24 @@ export class SearchComponent {
     // console.log("Filtered split:");
     // console.log(tokens);
 
-    // Add implied 'and' operators
-    let binOps = ['and', 'or', '&', '|'];
-    let allOps = ['and', 'or', '&', '|', 'not', '!'];
+    // Add implied 'and' operators. 
+    // add "&" before current token if:
+    // - not first token
+    // - the previous token was not a binary operator or "(", and the current token is not a binary operator or ")"
+    let binOps = ['and', 'or', '&', '|', ")"];
+    let allOps = ['and', 'or', '&', '|', 'not', '!', "("];
     let temp = [];
     let lastWasOperator = true;
     for (let i = 0; i < tokens.length; i++) {
-      if (!lastWasOperator && !binOps.includes(tokens[i])) {
-        temp.push('&');
+      if (!lastWasOperator && !binOps.includes(tokens[i])){
+          temp.push('&');
       }
       temp.push(tokens[i]);
-      if (allOps.includes(tokens[i])) {
-        lastWasOperator = true;
-      } else {
-        lastWasOperator = false;
-      }
+      lastWasOperator = allOps.includes(tokens[i]);
     }
-    // console.log('Tokens:');
-    // console.log(temp);
+
+    console.log('Tokens:');
+    console.log(temp);
     return temp;
   }
 
@@ -159,7 +159,7 @@ export class SearchComponent {
   searchShunted(tokens: string[]) {
     //TODO: if not enough operands, return error
     //TODO: must do function evals into sets before the boolean set operations <- bad approach, do the set operations as you go (eg keep searching same set for &, flip it for !, add two existing sets for |)
-    console.log(tokens)
+    // console.log(tokens)
     let operands : (Tile[]|string)[] = []; //stack of operands
     for (let i = 0; i < tokens.length; i++) {
       switch (tokens[i]) {
