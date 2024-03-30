@@ -8,14 +8,6 @@
         <option value="Inns&CathsC3">Inns & Cathedrals (C3 Print)</option>
     </select> -->
     <h3>Search Pieces</h3>
-    <input type="text" [(ngModel)]="sidesSearch" (input)="applySearch()" placeholder="Search by shape" maxlength="4"/>
-    <input type="checkbox" [(ngModel)]="monasterySearch" (change)="applySearch()" id="monasterySearch"/>
-    <input type="checkbox" [(ngModel)]="shieldSearch" (change)="applySearch()" id="shieldSearch"/>
-    <input type="checkbox" [(ngModel)]="innSearch" (change)="applySearch()" id="innSearch"/>
-    <input type="checkbox" [(ngModel)]="cathedralSearch" (change)="applySearch()" id="cathedralSearch"/>
-    <input type="checkbox" [(ngModel)]="wheatSearch" (change)="applySearch()" id="wheatSearch"/>
-    <input type="checkbox" [(ngModel)]="clothSearch" (change)="applySearch()" id="clothSearch"/>
-    <input type="checkbox" [(ngModel)]="wineSearch" (change)="applySearch()" id="wineSearch"/>
     <input type="text" [(ngModel)]="stringSearch" (input)="searchByStringParams()" id="stringSearch">
 </div>
 <div class="results">

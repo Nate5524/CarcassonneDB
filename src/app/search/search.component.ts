@@ -15,20 +15,8 @@ import { FormsModule } from '@angular/forms';
 export class SearchComponent {
   tileList: Tile[] = [];
   tileFinderService: TileFinderService = inject(TileFinderService);
-  searchMessage: string = '';
-
-  // Search parameters
+  searchMessage: string = "TODO: search message generated from query."
   stringSearch: string = '';
-  sidesSearch: string = '';
-  monasterySearch: boolean = false;
-  shieldSearch: boolean = false;
-  // Inns and Cathedrals
-  innSearch: boolean = false;
-  cathedralSearch: boolean = false;
-  // Traders and Builders
-  wheatSearch: boolean = false;
-  clothSearch: boolean = false;
-  wineSearch: boolean = false;
 
   constructor() {
     this.tileList = this.generateListFromExpansions();
@@ -477,78 +465,5 @@ export class SearchComponent {
       }
     }
     return tiles;
-  }
-
-  // const funcDict = {
-  //   s: this.searchBySides,
-  //   sides: this.searchBySides,
-  //   side: this.searchBySides,
-
-  //   m: this.searchBooleanTrait,
-  //   monastery: this.searchBooleanTrait,
-  //   monasteries: this.searchBooleanTrait,
-
-  //   i: this.searchBooleanTrait,
-  //   inn: this.searchBooleanTrait,
-  //   inns: this.searchBooleanTrait,
-
-  //   c: this.searchBooleanTrait,
-  //   cathedral: this.searchBooleanTrait,
-  //   cathedrals: this.searchBooleanTrait,
-
-  //   r: this.searchResource,
-  //   resource: this.searchResource,
-  //   resources: this.searchResource,
-  // };
-
-  searchBySides() {
-    if (this.sidesSearch.length === 0) {
-      this.tileList = this.generateListFromExpansions();
-      return;
-    }
-    this.tileList = this.tileFinderService.findTilesBySides(
-      this.sidesSearch.toUpperCase()
-    );
-  }
-
-  searchBooleanTrait(attribute: keyof Tile) {
-    let tempList: Tile[] = [];
-    for (let tile of this.tileList) {
-      if (tile[attribute]) {
-        tempList.push(tile);
-      }
-    }
-    this.tileList = tempList;
-  }
-
-  applySearch() {
-    this.searchMessage = '';
-    this.searchBySides();
-    if (this.sidesSearch.length > 0) {
-      this.searchMessage += ' with sides "' + this.sidesSearch + '"';
-    }
-    const boolSearchTraits: any[] = [
-      { attribute: 'monastery', search: this.monasterySearch },
-      { attribute: 'shield', search: this.shieldSearch },
-      { attribute: 'inn', search: this.innSearch },
-      { attribute: 'cathedral', search: this.cathedralSearch },
-      { attribute: 'wheat', search: this.wheatSearch },
-      { attribute: 'cloth', search: this.clothSearch },
-      { attribute: 'wine', search: this.wineSearch },
-    ];
-
-    for (let trait of boolSearchTraits) {
-      if (trait.search) {
-        this.searchBooleanTrait(trait.attribute);
-        this.searchMessage += ' with ' + trait.attribute;
-      }
-    }
-    this.searchMessage =
-      this.tileList.length + ' tiles found' + this.searchMessage;
-    return;
-  }
-
-  clearSearch() {
-    //TODO: - reset search
   }
 }
