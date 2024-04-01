@@ -49,20 +49,25 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # TODO ITEMS
 * Fully text-based searching
+    * only search when enter pressed
     * "How to" page for searching
-    * "OR" in search terms
-    * parentheses for order of operations
-    * strings and abbreviated strings as params
-    * Remove/label checkboxes
-    * advanced search needs order of operations validation (ex. searching "and x" or "x or")
-    * error handling for mismatched parentheses in advanced search
-    * store tiles by expansion in a more easily sortable way, implement more efficient search
+    * string generated from search query
+        * error handling for mismatched parentheses in advanced search
+        * error handling for operand in either first or last position of query
+    * if slow - store tiles by expansion in a more easily sortable way, implement more efficient search (pre-bucketed)
+    * stacking not operands is currently broken
+    * implement a display cap per page of search results to save on load time
+    * implement sorting of results in different ways
 * New data
     * gardens (make mandatory through tile interface)
     * tile quantity (mandatory)
     * minor tile variations (non-mandatory)
-* Tile information pages
-    * is it beneficial for each to track their expansion or too much overhead?
+* New pages
+    * finish advanced syntax page
+    * finish tile details page - need to be able to search by expansion and expId
+    * fcreate a searching toolbar for all non-searchy pages (like scryfall does)
+    * finish advanced search page and link that
+    * finish a list of expansions on a given page
 * Game tracking
     * score trackers
     * resource tracking

@@ -1,18 +1,21 @@
-<div>
-    <img src="assets/meeple.svg" alt="meeple" width="25px">
-    <!-- <select [(ngModel)]="selectedExpansion" (input)="addExpansion()">
-        TODO: - also could be checkboxes in a dropdown
-        <option value="">Pack Selector</option>
-        <option value="BaseC3">Base Game (C3 Print)</option>
-        <option value="RiverIC2">River I (C2 Print)</option>
-        <option value="Inns&CathsC3">Inns & Cathedrals (C3 Print)</option>
-    </select> -->
+<div class="searchDiv">
+  <div>
+    <a routerLink="/big-search"><img src="assets/meeple.svg" alt="meeple" width="25px" /></a>
     <h3>Search Pieces</h3>
-    <input type="text" [(ngModel)]="stringSearch" (input)="searchByStringParams()" id="stringSearch">
-</div>
-<div class="results">
+    <input
+      type="text"
+      [(ngModel)]="stringSearch"
+      (input)="searchByStringParams()"
+      id="stringSearch"
+    />
+    <button routerLink="/syntax-guide">Syntax Guide</button>
+    <button routerLink="/advanced-search">Advanced Search</button>
+    <button routerLink="/expansions-list">Expansions</button>
+  </div>
+  <div class="results">
     <p [innerHTML]="searchMessage"></p>
     <div class="resultsGrid">
-    <app-tile *ngFor="let tile of tileList" [tile]="tile"></app-tile>
+      <app-tile *ngFor="let tile of tileList" [tile]="tile"></app-tile>
     </div>
+  </div>
 </div>

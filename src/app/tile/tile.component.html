@@ -1,5 +1,3 @@
 <section class="tileDisplay">
-    <a><img class="tileImage" src="/assets/tilePngs/{{tile.image}}" alt="{{tile.stringRep}}"></a>
-    <!-- <p>In this game: {{tile.numInGame}}</p>
-    <p>Left in the bag: {{tile.numInBag}}</p> -->
+    <a [routerLink]="[ '/tile-details',tile.expansion,tile.expId]"><img class="tileImage" src="/assets/tilePngs/{{tile.image}}" alt="{{tile.stringRep}}"></a>
 </section>

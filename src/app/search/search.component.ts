@@ -4,11 +4,12 @@ import { Tile } from '../tile';
 import { TileFinderService } from '../tile-finder.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [TileComponent, CommonModule, FormsModule],
+  imports: [TileComponent, CommonModule, FormsModule, RouterLink],
   templateUrl: './search.component.html',
   styleUrl: './search.component.css',
 })
