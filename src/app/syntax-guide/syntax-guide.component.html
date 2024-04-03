@@ -1,44 +1,54 @@
 <app-toolbar></app-toolbar>
-<h2 class="sectionTitle">Sides</h2>
-<p class="sectionBody">
-  You can search based on the sides of a tile by using the
-  <span class="keyword">sides:</span> or
-  <span class="keyword">s:</span> keywords.
-</p>
-<p class="sectionBody">
-  These keywords should be followed by 1-4 letters representing the sides of the tile
-  in clockwise order.
-</p>
-<p class="sectionBody">
-  Known sides are:
-  <li><span class="keyword">c</span> for city</li>
-  <li><span class="keyword">f</span> for field</li>
-  <li><span class="keyword">r</span> for road</li>
-  <li><span class="keyword">s</span> for river (think "stream")</li>
-</p>
-<p class="sectionBody">
-  Orientation does not matter for the purpose of this search. Any rotation of
-  the search parameters will be considered an acceptable result (e.g
-  <span class="keyword">s:sfrc</span>, <span class="keyword">s:csfr</span>,
-  <span class="keyword">s:rcsf</span>, and
-  <span class="keyword">s:frcs</span> are all equivalent).
-</p>
-<p class="sectionBody">
-  If you want to search for a tile with city tiles on opposite sides and don't
-  care about the sides in between, you should use the wildcard character
-  <span class="keyword">-</span> to represent the sides you don't care about.
-</p>
-<div class="exampleSearch">
-  <p class="keyword">s:ccff</p>
-  <p>Tiles that have two adjacent castles, then two fields</p>
-</div>
-<div class="exampleSearch">
-  <p class="keyword">s:r-r-</p>
-  <p>Tiles that have roads on opposite edges, and anything on the other two</p>
-</div>
-<div class="exampleSearch">
-  <p class="keyword">s:s</p>
-  <p>Tiles where at least one of the edges is a river</p>
+<div class="section">
+  <div class="sectionExplanation">
+    <h2 class="sectionTitle">Sides</h2>
+    <p class="sectionBody">
+      You can search based on the sides of a tile by using the
+      <span class="keyword">sides:</span> or
+      <span class="keyword">s:</span> keywords.
+    </p>
+    <p class="sectionBody">
+      These keywords should be followed by 1-4 letters representing the sides of
+      the tile in clockwise order.
+    </p>
+    <p class="sectionBody">
+      Known sides are:
+      <li><span class="keyword">c</span> for city</li>
+      <li><span class="keyword">f</span> for field</li>
+      <li><span class="keyword">r</span> for road</li>
+      <li><span class="keyword">s</span> for river (think "stream")</li>
+    </p>
+    <p class="sectionBody">
+      Orientation does not matter for the purpose of this search. Any rotation
+      of the search parameters will be considered an acceptable result (e.g
+      <span class="keyword">s:sfrc</span>, <span class="keyword">s:csfr</span>,
+      <span class="keyword">s:rcsf</span>, and
+      <span class="keyword">s:frcs</span> are all equivalent).
+    </p>
+    <p class="sectionBody">
+      If you want to search for a tile with city tiles on opposite sides and
+      don't care about the sides in between, you should use the wildcard
+      character
+      <span class="keyword">-</span> to represent the sides you don't care
+      about.
+    </p>
+  </div>
+  <div class="sectionExamples">
+    <div class="exampleSearch">
+      <p class="keyword">s:ccff</p>
+      <p>Tiles that have two adjacent castles, then two fields</p>
+    </div>
+    <div class="exampleSearch">
+      <p class="keyword">s:r-r-</p>
+      <p>
+        Tiles that have roads on opposite edges, and anything on the other two
+      </p>
+    </div>
+    <div class="exampleSearch">
+      <p class="keyword">s:s</p>
+      <p>Tiles where at least one of the edges is a river</p>
+    </div>
+  </div>
 </div>
 <hr />
 <h2 class="sectionTitle">Tile Contents</h2>

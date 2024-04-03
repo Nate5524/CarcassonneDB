@@ -1,3 +1,33 @@
+.section{
+    display:flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.sectionExplanation{
+    width: 44%;
+    margin-right: 20px;
+}
+
+.sectionExamples{
+    width: 40%;
+    padding-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .section{
+        display:block;
+    }
+
+    .sectionExplanation{
+        min-width: 100%;
+    }
+
+    .sectionExamples{
+        min-width: 100%;
+    }
+}
+
 .sectionTitle{
     font-weight: lighter;
     margin-top: 9px;
@@ -37,7 +67,7 @@
     padding: 2px;
     padding: 7px;
     padding-left:10px;
-    margin-bottom: 20px;
+    margin-top: 20px;
     color: #555;
     border: 1px solid black;
     border-left: 4px solid #87014f;
