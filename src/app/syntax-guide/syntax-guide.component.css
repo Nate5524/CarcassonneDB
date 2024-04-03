@@ -1,0 +1,50 @@
+.sectionTitle{
+    font-weight: lighter;
+    margin-top: 9px;
+    margin-bottom: 7px;
+    font-size: 25px;
+    font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.sectionSubtitle{
+}
+
+.sectionBody{
+    font-size: 14px;
+    font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin:0px;
+    color:#16161D;
+    margin-bottom: 3px;
+    line-height: 1.3;
+}
+
+.keyword{
+    color:#87014f;
+    font-family: consolas;
+}
+
+.keyword:not(.exampleSearch>.keyword){
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.exampleSearch>*{
+    margin-top: 0px;
+    margin-bottom: 3px;
+}
+
+.exampleSearch{
+    padding: 2px;
+    padding: 7px;
+    padding-left:10px;
+    margin-bottom: 20px;
+    color: #555;
+    border: 1px solid black;
+    border-left: 4px solid #87014f;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.exampleSearch:hover{
+    background-color: #dddddd;
+}
