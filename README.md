@@ -50,7 +50,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 # TODO ITEMS
 * Fully text-based searching
     * only search when enter pressed
-    * "How to" page for searching
     * string generated from search query
         * error handling for mismatched parentheses in advanced search
         * error handling for operand in either first or last position of query
@@ -58,16 +57,20 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     * stacking not operands is currently broken
     * implement a display cap per page of search results to save on load time
     * implement sorting of results in different ways
+    * implement a goods search & add it to the syntax page
+    * implement expansion search & add it to the syntax page
+    * implement printings search & add it to the syntax page
 * New data
-    * gardens (make mandatory through tile interface)
     * tile quantity (mandatory)
-    * minor tile variations (non-mandatory)
+    * decorative elements on currently "stacked" tiles
+        * gardens (non-mandatory) - small implementation in right now that needs fixing
+        * minor tile variations (non-mandatory)
 * New pages
-    * finish advanced syntax page
+    * finish advanced syntax page - add unimplemented searches and explain how boolean expressions work
     * finish tile details page - need to be able to search by expansion and expId
-    * fcreate a searching toolbar for all non-searchy pages (like scryfall does)
-    * finish advanced search page and link that
-    * finish a list of expansions on a given page
+    * create a searching toolbar for all non-searchy pages (like scryfall does)
+    * finish advanced search (hand-holding) page and link that
+    * finish the expansions list page
 * Game tracking
     * score trackers
     * resource tracking

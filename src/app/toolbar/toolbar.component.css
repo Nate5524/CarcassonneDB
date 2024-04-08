@@ -1,0 +1,43 @@
+#search-bar{
+    background-color: darkslateblue;
+    color:white;
+    border:none;
+    border-bottom: 1px solid white;
+    outline:none;
+    font-size: 1em;
+}
+
+#toolbar>p{
+    color:white;
+    padding:0px;
+    margin:0px;
+}
+
+#toolbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: darkslateblue;
+    padding: 10px;
+}
+
+.vert-line{
+    border-left: 1px solid white;
+    height: 100%;
+    margin: 0px 10px;
+}
+
+.toolbar-links{
+    display:flex;
+    justify-content: space-between;
+}
+
+.toolbar-button{
+    margin-right: 10px;
+    color:lightgray;
+    text-decoration: none;
+}
+
+.toolbar-button:hover{
+    color:white;
+    text-decoration: underline solid 1px white;
+}

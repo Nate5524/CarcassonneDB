@@ -8,8 +8,9 @@ export interface Tile {
     image: string;
     stringRep: string;
 
-    monastery: boolean;
-    shield: boolean; // "Coat of Arms" in official rules
+    monastery?: boolean;
+    shield?: boolean; // "Coat of Arms" in official rules
+    garden?: boolean;
     starter?: boolean; // "Start Tile" - not part of the deck, but options vary based on expansions
 
     //Potential tile features (mostly decorative, minor game effects)

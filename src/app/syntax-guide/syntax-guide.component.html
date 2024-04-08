@@ -1,4 +1,5 @@
 <app-toolbar></app-toolbar>
+<!-- Tile Sides Section -->
 <div class="section">
   <div class="sectionExplanation">
     <h2 class="sectionTitle">Sides</h2>
@@ -20,7 +21,7 @@
     </p>
     <p class="sectionBody">
       Orientation does not matter for the purpose of this search. Any rotation
-      of the search parameters will be considered an acceptable result (e.g
+      of the search parameters will be considered an acceptable result (e.g.
       <span class="keyword">s:sfrc</span>, <span class="keyword">s:csfr</span>,
       <span class="keyword">s:rcsf</span>, and
       <span class="keyword">s:frcs</span> are all equivalent).
@@ -51,13 +52,87 @@
   </div>
 </div>
 <hr />
-<h2 class="sectionTitle">Tile Contents</h2>
-<h4 class="sectionSubtitle">Monasteries</h4>
-<h4 class="sectionSubtitle">Coats of Arms</h4>
-<h4 class="sectionSubtitle">Gardens</h4>
-<h4 class="sectionSubtitle">Inns</h4>
-<h4 class="sectionSubtitle">Cathedrals</h4>
-<h4 class="sectionSubtitle">Goods</h4>
-<h2 class="sectionTitle">Expansions</h2>
-<h2 class="sectionTitle">Printings</h2>
-<h2 class="sectionTitle">Boolean Expressions</h2>
+
+<!-- Tile Contents Section -->
+<div class="section">
+  <div class="sectionExplanation">
+    <h2 class="sectionTitle">Tile Contents</h2>
+    <p class="sectionBody">
+      You can search tiles based on whether they containa certain game feature
+      by specifying the feature name as a search keyword.
+    </p>
+    <p class="sectionBody">
+      Known features are:
+      <li>
+        Monasteries (written as <span class="keyword">monastery</span>,
+        <span class="keyword">mon</span>, or <span class="keyword">m</span>)
+      </li>
+      <li>
+        Coat of Arms (written as <span class="keyword">coa</span>,
+        <span class="keyword">shield</span>, or
+        <span class="keyword">coat-of-arms</span>)
+      </li>
+      <li>
+        Gardens (written as <span class="keyword">garden</span> or
+        <span class="keyword" keyword>g</span>)
+      </li>
+      <li>
+        Inns (written as <span class="keyword">inn</span> or
+        <span class="keyword">i</span>)
+      </li>
+      <li>
+        Cathedrals (written as <span class="keyword">cathedral</span>,
+        <span class="keyword">cath</span>, or <span class="keyword">c</span>)
+      </li>
+    </p>
+    <p class="sectionBody">
+      These searches can be performed either inclusively or exclusively. To
+      perform an exclusive search, the search term should be followed with a
+      colon and an operand meaning false (such as
+      <span class="keyword">f</span>). To perform an exclusive search, the
+      search term should be followed with a colon and an operand meaning true
+      (such as <span class="keyword">t</span>).
+    </p>
+  </div>
+  <div class="sectionExamples">
+    <div class="exampleSearch">
+      <p class="keyword">m:t</p>
+      <p>Tiles with monasteries</p>
+    </div>
+    <div class="exampleSearch">
+      <p class="keyword">coa:f</p>
+      <p>Tiles without coat of arms</p>
+    </div>
+    <div class="exampleSearch">
+      <p class="keyword">garden and inn:f</p>
+      <p>Tiles with a garden, but without an inn</p>
+    </div>
+  </div>
+</div>
+<hr />
+
+<!-- Expansions Section -->
+<div class="section">
+  <div class="sectionExplanation">
+    <h2 class="sectionTitle">Expansions</h2>
+  </div>
+  <div class="sectionExamples"></div>
+</div>
+<hr />
+
+<!-- Printings Section -->
+<div class="section">
+  <div class="sectionExplanation">
+    <h2 class="sectionTitle">Printings</h2>
+  </div>
+  <div class="sectionExamples"></div>
+</div>
+<hr />
+
+<!-- Boolean Expressions Section -->
+<div class="section">
+  <div class="sectionExplanation">
+    <h2 class="sectionTitle">Boolean Expressions</h2>
+  </div>
+  <div class="sectionExamples"></div>
+</div>

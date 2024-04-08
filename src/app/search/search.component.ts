@@ -300,7 +300,6 @@ export class SearchComponent {
       case 'shields':
       case 'shield':
       case 'coat':
-      case 'coat of arms':
       case 'coa':
       case 'coatofarms':
       case 'coat-of-arms':
@@ -332,6 +331,16 @@ export class SearchComponent {
           return this.performCathedralSearch(tiles, true);
         } else if (q.length == 2 && (q1 = this.parseBool(q[1])) != -1) {
           return this.performCathedralSearch(tiles, q1 === 1);
+        }
+        break;
+      
+      case "gardens":
+      case "garden":
+      case "g":
+        if (q.length == 1) {
+          return this.performGardenSearch(tiles, true);
+        } else if (q.length == 2 && (q1 = this.parseBool(q[1])) != -1) {
+          return this.performGardenSearch(tiles, q1 === 1);
         }
         break;
 
@@ -421,8 +430,29 @@ export class SearchComponent {
   }
 
   performMonasterySearch(tiles: Tile[], tf: boolean): Tile[] {
+    var TF;
+    if (!tf) {
+      TF = undefined;
+    } else {
+      TF = true;
+    }
     for (let i = tiles.length - 1; i >= 0; i--) {
-      if (tiles[i].monastery !== tf) {
+      if (tiles[i].monastery != TF) {
+        tiles.splice(i, 1);
+      }
+    }
+    return tiles;
+  }
+
+  performGardenSearch(tiles: Tile[], tf: boolean): Tile[] {
+    var TF;
+    if (!tf) {
+      TF = undefined;
+    } else {
+      TF = true;
+    }
+    for (let i = tiles.length - 1; i >= 0; i--) {
+      if (tiles[i].garden != TF) {
         tiles.splice(i, 1);
       }
     }
@@ -430,8 +460,14 @@ export class SearchComponent {
   }
 
   performShieldSearch(tiles: Tile[], tf: boolean): Tile[] {
+    var TF;
+    if (!tf) {
+      TF = undefined;
+    } else {
+      TF = true;
+    }
     for (let i = tiles.length - 1; i >= 0; i--) {
-      if (tiles[i].shield !== tf) {
+      if (tiles[i].shield != TF) {
         tiles.splice(i, 1);
       }
     }
