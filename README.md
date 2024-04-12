@@ -49,7 +49,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # TODO ITEMS
 * Fully text-based searching
-    * only search when enter pressed
     * string generated from search query
         * error handling for mismatched parentheses in advanced search
         * error handling for operand in either first or last position of query

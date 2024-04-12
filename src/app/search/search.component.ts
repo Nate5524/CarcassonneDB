@@ -6,11 +6,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import {ActivatedRoute} from '@angular/router';
+import { ToolbarComponent } from '../toolbar/toolbar.component';
 
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [TileComponent, CommonModule, FormsModule, RouterLink],
+  imports: [TileComponent, CommonModule, FormsModule, RouterLink, ToolbarComponent],
   templateUrl: './search.component.html',
   styleUrl: './search.component.css',
 })
