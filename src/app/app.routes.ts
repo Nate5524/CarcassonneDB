@@ -8,7 +8,7 @@ import { ExpansionsListComponent } from './expansions-list/expansions-list.compo
 import { BigSearchPageComponent } from './big-search-page/big-search-page.component';
 
 export const routes: Routes = [
-  { path: 'search', component: SearchComponent },
+  { path: 'search/:query', component: SearchComponent },
   { path: 'syntax-guide', component: SyntaxGuideComponent },
   { path: 'advanced-search', component: AdvancedSearchComponent },
   { path: 'expansions-list', component: ExpansionsListComponent },

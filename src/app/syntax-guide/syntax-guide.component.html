@@ -35,18 +35,18 @@
     </p>
   </div>
   <div class="sectionExamples">
-    <div class="exampleSearch">
+    <div class="exampleSearch" [routerLink]="[ '/search','s:ccff']">
       <p class="keyword">s:ccff</p>
       <p>Tiles that have two adjacent castles, then two fields</p>
     </div>
-    <div class="exampleSearch">
+    <div class="exampleSearch" [routerLink]="[ '/search','s:r-r-']">
       <p class="keyword">s:r-r-</p>
       <p>
         Tiles that have roads on opposite edges, and anything on the other two
       </p>
     </div>
-    <div class="exampleSearch">
-      <p class="keyword">s:s</p>
+    <div class="exampleSearch" [routerLink]="[ '/search','sides:s']">
+      <p class="keyword">sides:s</p>
       <p>Tiles where at least one of the edges is a river</p>
     </div>
   </div>
@@ -95,15 +95,15 @@
     </p>
   </div>
   <div class="sectionExamples">
-    <div class="exampleSearch">
+    <div class="exampleSearch" [routerLink]="[ '/search','m:t']">
       <p class="keyword">m:t</p>
       <p>Tiles with monasteries</p>
     </div>
-    <div class="exampleSearch">
+    <div class="exampleSearch" [routerLink]="[ '/search','coa:f']">
       <p class="keyword">coa:f</p>
       <p>Tiles without coat of arms</p>
     </div>
-    <div class="exampleSearch">
+    <div class="exampleSearch" [routerLink]="[ '/search','garden and inn:f']">
       <p class="keyword">garden and inn:f</p>
       <p>Tiles with a garden, but without an inn</p>
     </div>

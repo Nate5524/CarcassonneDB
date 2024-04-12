@@ -5,6 +5,7 @@ import { TileFinderService } from '../tile-finder.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -19,8 +20,10 @@ export class SearchComponent {
   searchMessage: string = "TODO: search message generated from query."
   stringSearch: string = '';
 
-  constructor() {
+  constructor(private route : ActivatedRoute) {
+    this.stringSearch = this.route.snapshot.params['query'];
     this.tileList = this.generateListFromExpansions();
+    this.searchByStringParams();
   }
 
   /**

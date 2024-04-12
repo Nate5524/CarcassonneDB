@@ -60,6 +60,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     * implement a goods search & add it to the syntax page
     * implement expansion search & add it to the syntax page
     * implement printings search & add it to the syntax page
+    * different ways of ordering the results based on input (expansion, id, number in play)
 * New data
     * tile quantity (mandatory)
     * decorative elements on currently "stacked" tiles
