@@ -1,5 +1,5 @@
 <div id="toolbar">
-  <form onsubmit="alert()"><input id="search-bar" type="text" value="TODO - functionality" /></form>
+  <form (submit)="performSearch()"><input id="search-bar" type="text" placeholder="Search tiles..." /></form>
   <div class="vert-line"></div>
   <div class="toolbar-links">
     <a class="toolbar-button" routerLink="/syntax-guide"> Syntax Guide </a>

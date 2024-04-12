@@ -10,4 +10,13 @@ import { RouterLink, Router } from '@angular/router';
 })
 export class ToolbarComponent {
 
+  constructor(private router: Router) { }
+
+  performSearch(){
+    const query = (document.getElementById('search-bar') as HTMLInputElement).value;
+    if (query.trim() !== '') {
+      this.router.navigate(['/search', query]);
+    }
+  }
+
 }
