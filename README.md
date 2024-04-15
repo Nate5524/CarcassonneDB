@@ -55,11 +55,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     * if slow - store tiles by expansion in a more easily sortable way, implement more efficient search (pre-bucketed)
     * stacking not operands is currently broken
     * implement a display cap per page of search results to save on load time
-    * implement sorting of results in different ways
     * implement a goods search & add it to the syntax page
     * implement expansion search & add it to the syntax page
     * implement printings search & add it to the syntax page
-    * different ways of ordering the results based on input (expansion, id, number in play)
+    * implement a numFeatures search & add it to the syntax page
+    * different ways of ordering the results based on another parameter (expansion, id, number in play)
 * New data
     * tile quantity (mandatory)
     * decorative elements on currently "stacked" tiles
@@ -68,12 +68,16 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * New pages
     * finish advanced syntax page - add unimplemented searches and explain how boolean expressions work
     * finish tile details page - need to be able to search by expansion and expId
-    * create a searching toolbar for all non-searchy pages (like scryfall does)
     * finish advanced search (hand-holding) page and link that
     * finish the expansions list page
 * Game tracking
+    * add tracker link to toolbar and conditional elements in relevant places to add tiles
+    * could potentially make a smaller tracker menu to display on all pages (when tracking) sort of like a 2nd toolbar or a new column of data
     * score trackers
     * resource tracking
     * game creation based on selected expansions
     * page explaining difference in C1, C2, and C3
     * tile use checking "counting cards"
+* Style
+    * toolbar improvements
+    * art per keyword on syntax page
