@@ -77,4 +77,5 @@
 
 .exampleSearch:hover{
     background-color: #dddddd;
+    cursor: pointer;
 }

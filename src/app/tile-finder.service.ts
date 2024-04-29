@@ -21,6 +21,26 @@ export class TileFinderService {
     this.tileList = this.tileList.concat(data.tradersAndBuildersC3Tiles());
   }
 
+  BaseSetTiles(): Tile[] {
+    let data: TileDatasetsService = new TileDatasetsService();
+    return data.baseC3Tiles();
+  }
+
+  River1Tiles(): Tile[] {
+    let data: TileDatasetsService = new TileDatasetsService();
+    return data.riverIC2Tiles();
+  }
+
+  InnsAndCathedralsTiles(): Tile[] {
+    let data: TileDatasetsService = new TileDatasetsService();
+    return data.innsAndCathedralsC3Tiles();
+  }
+
+  TradersAndBuildersTiles(): Tile[]{
+    let data: TileDatasetsService = new TileDatasetsService();
+    return data.tradersAndBuildersC3Tiles();
+  }
+
   findTilesBySides(search: string): Tile[] {
     let found: Tile[] = [];
     let UNKNOWN = '-';

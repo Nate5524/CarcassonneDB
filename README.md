@@ -60,6 +60,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     * implement printings search & add it to the syntax page
     * implement a numFeatures search & add it to the syntax page
     * different ways of ordering the results based on another parameter (expansion, id, number in play)
+    * make the keywords on the search terms page link to a unique explanation page - list all keyword aliases and accepted params there
 * New data
     * tile quantity (mandatory)
     * decorative elements on currently "stacked" tiles

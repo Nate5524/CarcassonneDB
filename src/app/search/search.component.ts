@@ -348,6 +348,15 @@ export class SearchComponent {
         }
         break;
 
+      case "expansions":
+      case "expansion":
+      case "exp":
+      case "e":
+        if (q.length == 2) {
+          return this.performExpansionSearch(tiles, q[1]);
+        }
+        break;
+
       default:
         break;
     }
@@ -506,5 +515,44 @@ export class SearchComponent {
       }
     }
     return tiles;
+  }
+
+  performExpansionSearch(tiles: Tile[], query: string): Tile[] {
+    let search = query.toLowerCase();
+    let found: Tile[] = [];
+    switch(query){
+      case "base-set":
+      case "base_set":
+      case "baseset":
+      case "base":
+      case "b":
+      case "starter":
+      case "s":
+      case "starter-set":
+      case "starter_set":
+        return this.tileFinderService.BaseSetTiles();
+      case "river1":
+      case "river-1":
+      case "river_1":
+      case "r1":
+      case "river":
+      case "r":
+      case "river-i":
+      case "river_i":
+      case "riveri":
+      case "ri":
+        return this.tileFinderService.River1Tiles();
+      case "innsandcathedrals":
+      case "inns-and-cathedrals":
+      case "inns_and_cathedrals":
+      case "iac":
+        return this.tileFinderService.InnsAndCathedralsTiles();
+      case "tradersandbuilders":
+      case "traders-and-builders":
+      case "traders_and_builders":
+      case "tab":
+        return this.tileFinderService.TradersAndBuildersTiles();
+    }
+    return [];
   }
 }

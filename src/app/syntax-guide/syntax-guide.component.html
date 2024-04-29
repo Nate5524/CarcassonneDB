@@ -1,5 +1,6 @@
 <app-toolbar></app-toolbar>
 <!-- Tile Sides Section -->
+<!-- TODO: explain search, capitalization doens't matter -->
 <div class="section">
   <div class="sectionExplanation">
     <h2 class="sectionTitle">Sides</h2>
@@ -35,17 +36,17 @@
     </p>
   </div>
   <div class="sectionExamples">
-    <div class="exampleSearch" [routerLink]="[ '/search','s:ccff']">
+    <div class="exampleSearch" [routerLink]="['/search', 's:ccff']">
       <p class="keyword">s:ccff</p>
       <p>Tiles that have two adjacent castles, then two fields</p>
     </div>
-    <div class="exampleSearch" [routerLink]="[ '/search','s:r-r-']">
+    <div class="exampleSearch" [routerLink]="['/search', 's:r-r-']">
       <p class="keyword">s:r-r-</p>
       <p>
         Tiles that have roads on opposite edges, and anything on the other two
       </p>
     </div>
-    <div class="exampleSearch" [routerLink]="[ '/search','sides:s']">
+    <div class="exampleSearch" [routerLink]="['/search', 'sides:s']">
       <p class="keyword">sides:s</p>
       <p>Tiles where at least one of the edges is a river</p>
     </div>
@@ -95,16 +96,16 @@
     </p>
   </div>
   <div class="sectionExamples">
-    <div class="exampleSearch" [routerLink]="[ '/search','m:t']">
+    <div class="exampleSearch" [routerLink]="['/search', 'm:t']">
       <p class="keyword">m:t</p>
       <p>Tiles with monasteries</p>
     </div>
-    <div class="exampleSearch" [routerLink]="[ '/search','coa:f']">
+    <div class="exampleSearch" [routerLink]="['/search', 'coa:f']">
       <p class="keyword">coa:f</p>
       <p>Tiles without coat of arms</p>
     </div>
-    <div class="exampleSearch" [routerLink]="[ '/search','garden and inn:f']">
-      <p class="keyword">garden and inn:f</p>
+    <div class="exampleSearch" [routerLink]="['/search', 'garden inn:f']">
+      <p class="keyword">garden inn:f</p>
       <p>Tiles with a garden, but without an inn</p>
     </div>
   </div>
@@ -115,8 +116,34 @@
 <div class="section">
   <div class="sectionExplanation">
     <h2 class="sectionTitle">Expansions</h2>
+    <p class="sectionBody">
+      You can search for tiles from a specific expansion by using the
+      <span class="keyword">expansion:</span> or
+      <span class="keyword">exp:</span> keywords, followed by the name of the
+      expansion to search for.
+    </p>
+    <p class="sectionBody">
+      Valid forms for the expansion name are: camelCase, snake_case, and
+      kebab-case, as well as abbreviations wherever one can be inferred. For the
+      purposes of this search, capitalization does not matter.
+    </p>
   </div>
-  <div class="sectionExamples"></div>
+  <div class="sectionExamples">
+    <div
+      class="exampleSearch"
+      [routerLink]="['/search', 'expansion:inns-and-cathedrals']"
+    >
+      <p class="keyword">expansion:inns-and-cathedrals</p>
+      <p>Tiles from the Inns and Cathedrals expansion</p>
+    </div>
+    <div
+      class="exampleSearch"
+      [routerLink]="['/search', 'exp:baseset']"
+    >
+      <p class="keyword">exp:baseset</p>
+      <p>Tiles from the Traders and Builders expansion</p>
+    </div>
+  </div>
 </div>
 <hr />
 
@@ -124,8 +151,20 @@
 <div class="section">
   <div class="sectionExplanation">
     <h2 class="sectionTitle">Printings</h2>
+    <p class="sectionBody">
+      You can search for tiles from a specific printing by using the
+      <span class="keyword">printing:</span> or
+      <span class="keyword">print:</span> keywords, followed by the name of the
+      printing to search for.
+    </p>
+    <p class="sectionBody">
+      Valid forms for the printing name are: camelCase, snake_case, and
+      kebab-case, as well as abbreviations wherever one can be inferred. For the
+      purposes of this search, capitalization does not matter.
+    </p>
   </div>
   <div class="sectionExamples"></div>
+  <!-- TODO: examples -->
 </div>
 <hr />
 
@@ -133,6 +172,47 @@
 <div class="section">
   <div class="sectionExplanation">
     <h2 class="sectionTitle">Boolean Expressions</h2>
+    <p class="sectionBody">
+      All of the above search terms work by searching the list of all existing
+      tiles to see if they match a given criteria. If you want to search for
+      tiles that meet multiple different criteria, that contain one or more
+      different features, or the inverse of a search term, you can use boolean
+      expressions.
+    </p>
+    <p class="sectionBody">
+      By default, all search terms are combined with the logical 'and' operator.
+      This means all tiles found by the search must match all criteria
+      specified. If preferred, you can use the keyword
+      <span class="keyword">and</span> (or <span class="keyword">&</span>) to
+      explicitly show this relationship in a search.
+    </p>
+    <p class="sectionBody">
+      If you want to search for tiles that meet at least one of two search
+      terms, you would use the logical 'or' operator (written as either
+      <span class="keyword">or</span> or <span class="keyword">|</span>). This
+      must be explicitly stated in the search, as otherwise the default 'and'
+      operator will be used to join two search functions.
+    </p>
+    <p class="sectionBody">
+      If you want to search for all tiles that do not meet a certain criteria,
+      you can use the logical 'not' operator (specified by either
+      <span class="keyword">not</span> or <span class="keyword">!</span>). When
+      placed before a search keyword, this will return the inverse of what that
+      keyword is searching for.
+    </p>
   </div>
-  <div class="sectionExamples"></div>
+  <div class="sectionExamples">
+    <!-- TODO: examples -->
+  </div>
+</div>
+<hr />
+
+<div class="section">
+  <div class="sectionExplanation">
+    <h2 class="sectionTitle">Order of Operations</h2>
+    <!-- TODO: content -->
+  </div>
+  <div class="sectionExamples">
+    <!-- TODO: content -->
+  </div>
 </div>

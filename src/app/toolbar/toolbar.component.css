@@ -7,6 +7,10 @@
     font-size: 1em;
 }
 
+input#search-bar::placeholder, #toolbar>a{
+    color: lightgray;
+}
+
 #toolbar>p{
     color:white;
     padding:0px;
