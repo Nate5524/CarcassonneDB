@@ -3,6 +3,7 @@ export interface Tile {
     expansion: string;
     expId: number; //Expansion ID - count up from 0 as tiles are added to a set. 
     //This is a metric I invented to make coding easier, not an inherent part of the game
+    variations: TileVariations;
 
     sides: string;
     image: string;
@@ -10,17 +11,7 @@ export interface Tile {
 
     monastery?: boolean;
     shield?: boolean; // "Coat of Arms" in official rules
-    garden?: boolean;
-    starter?: boolean; // "Start Tile" - not part of the deck, but options vary based on expansions
-
-    //Potential tile features (mostly decorative, minor game effects)
-    // garden: boolean;
-    // farmhouse: boolean;
-    // cowshed: boolean;
-    // waterTower: boolean;
-    // highwayman: boolean;
-    // pigsty: boolean;
-    // donkeyStable: boolean;
+    // starter?: boolean; // "Start Tile" - not part of the deck, but options vary based on expansions
 
     // Expansion 1:
     inn?: boolean;
@@ -34,4 +25,15 @@ export interface Tile {
     // Only matter if a game is being tracked
     // numInGame: number;
     // numInBag: number;
+}
+
+export interface TileVariations{
+    g?: number; //garden
+    f?: number; //farmhouse
+    c?: number; //cowshed
+    w?: number; //water tower
+    h?: number; //highwayman
+    p?: number; //pigsty
+    d?: number; //donkey stable
+    b?: number; //blank (no decorations)
 }

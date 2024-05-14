@@ -21,6 +21,7 @@ export class TileDatasetsService {
         image: 'Base_Game_C3_Tile_A.png',
         stringRep: 'This is a tile',
         monastery: true,
+        variations: {h:1, b:1},
       },
       {
         expansion: 'BaseC3',
@@ -29,6 +30,7 @@ export class TileDatasetsService {
         image: 'Base_Game_C3_Tile_B.png',
         stringRep: 'This is a tile',
         monastery: true,
+        variations: {f:1, d:1, b:2},
       },
       {
         expansion: 'BaseC3',
@@ -37,6 +39,7 @@ export class TileDatasetsService {
         image: 'Base_Game_C3_Tile_C.png',
         stringRep: 'This is a tile',
         shield: true,
+        variations: {w:1},
       },
       {
         expansion: 'BaseC3',
@@ -44,6 +47,7 @@ export class TileDatasetsService {
         sides: 'CRFR',
         image: 'Base_Game_C3_Tile_D.png',
         stringRep: 'This is a tile',
+        variations: {f:1, p:1, b:2},
       },
       {
         expansion: 'BaseC3',
@@ -51,6 +55,7 @@ export class TileDatasetsService {
         sides: 'CFFF',
         image: 'Base_Game_C3_Tile_E.png',
         stringRep: 'This is a tile',
+        variations: {g:1, f:1, w:1, b:2},
       },
       {
         expansion: 'BaseC3',
@@ -59,6 +64,7 @@ export class TileDatasetsService {
         image: 'Base_Game_C3_Tile_F.png',
         stringRep: 'This is a tile',
         shield: true,
+        variations: {w:1, b:1},
       },
       {
         expansion: 'BaseC3',
@@ -66,6 +72,7 @@ export class TileDatasetsService {
         sides: 'FCFC',
         image: 'Base_Game_C3_Tile_G.png',
         stringRep: 'This is a tile',
+        variations: {b:1},
       },
       {
         expansion: 'BaseC3',
@@ -73,6 +80,7 @@ export class TileDatasetsService {
         sides: 'CFCF',
         image: 'Base_Game_C3_Tile_H.png',
         stringRep: 'This is a tile',
+        variations: {g:1, w:1, b:1},
       },
       {
         expansion: 'BaseC3',
@@ -80,6 +88,7 @@ export class TileDatasetsService {
         sides: 'CFFC',
         image: 'Base_Game_C3_Tile_I.png',
         stringRep: 'This is a tile',
+        variations: {g:1, b:1},
       },
       {
         expansion: 'BaseC3',
@@ -87,6 +96,7 @@ export class TileDatasetsService {
         sides: 'CRRF',
         image: 'Base_Game_C3_Tile_J.png',
         stringRep: 'This is a tile',
+        variations: {h:1, f:1, c:1}
       },
       {
         expansion: 'BaseC3',
@@ -94,6 +104,7 @@ export class TileDatasetsService {
         sides: 'CFRR',
         image: 'Base_Game_C3_Tile_K.png',
         stringRep: 'This is a tile',
+        variations: {h:1, f:1, d:1},
       },
       {
         expansion: 'BaseC3',
@@ -101,6 +112,7 @@ export class TileDatasetsService {
         sides: 'CRRR',
         image: 'Base_Game_C3_Tile_L.png',
         stringRep: 'This is a tile',
+        variations: {b:3},
       },
       {
         expansion: 'BaseC3',
@@ -109,6 +121,7 @@ export class TileDatasetsService {
         image: 'Base_Game_C3_Tile_M.png',
         stringRep: 'This is a tile',
         shield: true,
+        variations: {g:1, b:1},
       },
       {
         expansion: 'BaseC3',
@@ -116,6 +129,7 @@ export class TileDatasetsService {
         sides: 'CCFF',
         image: 'Base_Game_C3_Tile_N.png',
         stringRep: 'This is a tile',
+        variations: {g:1, w:1, b:1},
       },
       {
         expansion: 'BaseC3',
@@ -124,6 +138,7 @@ export class TileDatasetsService {
         image: 'Base_Game_C3_Tile_O.png',
         stringRep: 'This is a tile',
         shield: true,
+        variations: {f:1, c:1},
       },
       {
         expansion: 'BaseC3',
@@ -131,6 +146,7 @@ export class TileDatasetsService {
         sides: 'CRRC',
         image: 'Base_Game_C3_Tile_P.png',
         stringRep: 'This is a tile',
+        variations: {h:1, w:1, b:1},
       },
       {
         expansion: 'BaseC3',
@@ -139,6 +155,7 @@ export class TileDatasetsService {
         image: 'Base_Game_C3_Tile_Q.png',
         stringRep: 'This is a tile',
         shield: true,
+        variations: {b:1},
       },
       {
         expansion: 'BaseC3',
@@ -146,6 +163,7 @@ export class TileDatasetsService {
         sides: 'CCFC',
         image: 'Base_Game_C3_Tile_R.png',
         stringRep: 'This is a tile',
+        variations: {g:1, w:1, b:1},
       },
       {
         expansion: 'BaseC3',
@@ -154,6 +172,7 @@ export class TileDatasetsService {
         image: 'Base_Game_C3_Tile_S.png',
         stringRep: 'This is a tile',
         shield: true,
+        variations: {w:1, b:1},
       },
       {
         expansion: 'BaseC3',
@@ -161,6 +180,7 @@ export class TileDatasetsService {
         sides: 'CCRC',
         image: 'Base_Game_C3_Tile_T.png',
         stringRep: 'This is a tile',
+        variations: {b:1},
       },
       {
         expansion: 'BaseC3',
@@ -168,6 +188,7 @@ export class TileDatasetsService {
         sides: 'RFRF',
         image: 'Base_Game_C3_Tile_U.png',
         stringRep: 'This is a tile',
+        variations: {g:1, h:2, f:1, p:1, b:3},
       },
       {
         expansion: 'BaseC3',
@@ -175,6 +196,7 @@ export class TileDatasetsService {
         sides: 'FFRR',
         image: 'Base_Game_C3_Tile_V.png',
         stringRep: 'This is a tile',
+        variations: {g:1, h:2, f:1, p:2, b:3},
       },
       {
         expansion: 'BaseC3',
@@ -182,6 +204,7 @@ export class TileDatasetsService {
         sides: 'FRRR',
         image: 'Base_Game_C3_Tile_W.png',
         stringRep: 'This is a tile',
+        variations: {b:4},
       },
       {
         expansion: 'BaseC3',
@@ -189,6 +212,7 @@ export class TileDatasetsService {
         sides: 'RRRR',
         image: 'Base_Game_C3_Tile_X.png',
         stringRep: 'This is a tile',
+        variations: {b:1}
       },
     ],
   };
@@ -205,15 +229,16 @@ export class TileDatasetsService {
         image: 'Inns_And_Cathedrals_C3_Tile_A.png',
         stringRep: 'This is a tile',
         inn: true,
+        variations: {h:1},
       },
       {
         expansion: 'InnsAndCathedralsC3',
         expId: 1,
         sides: 'FRFR',
-        garden: true,
         image: 'Inns_And_Cathedrals_C3_Tile_B.png',
         stringRep: 'This is a tile',
         inn: true,
+        variations: {g:1},
       },
       {
         expansion: 'InnsAndCathedralsC3',
@@ -222,6 +247,7 @@ export class TileDatasetsService {
         image: 'Inns_And_Cathedrals_C3_Tile_C.png',
         stringRep: 'This is a tile',
         inn: true,
+        variations: {p:1},
       },
       {
         expansion: 'InnsAndCathedralsC3',
@@ -230,6 +256,7 @@ export class TileDatasetsService {
         image: 'Inns_And_Cathedrals_C3_Tile_D.png',
         stringRep: 'This is a tile',
         monastery: true,
+        variations: {b:1},
       },
       {
         expansion: 'InnsAndCathedralsC3',
@@ -237,6 +264,7 @@ export class TileDatasetsService {
         sides: 'RRRR',
         image: 'Inns_And_Cathedrals_C3_Tile_E.png',
         stringRep: 'This is a tile',
+        variations: {f:1},
       },
       {
         expansion: 'InnsAndCathedralsC3',
@@ -244,6 +272,7 @@ export class TileDatasetsService {
         sides: 'CRFC',
         image: 'Inns_And_Cathedrals_C3_Tile_F.png',
         stringRep: 'This is a tile',
+        variations: {d:1},
       },
       {
         expansion: 'InnsAndCathedralsC3',
@@ -251,14 +280,15 @@ export class TileDatasetsService {
         sides: 'FFFC',
         image: 'Inns_And_Cathedrals_C3_Tile_G.png',
         stringRep: 'This is a tile',
+        variations: {w:1},
       },
       {
         expansion: 'InnsAndCathedralsC3',
         expId: 7,
         sides: 'CCCC',
-        garden:true,
         image: 'Inns_And_Cathedrals_C3_Tile_H.png',
         stringRep: 'This is a tile',
+        variations: {g:1},
       },
       {
         expansion: 'InnsAndCathedralsC3',
@@ -266,6 +296,7 @@ export class TileDatasetsService {
         sides: 'CRCR',
         image: 'Inns_And_Cathedrals_C3_Tile_I.png',
         stringRep: 'This is a tile',
+        variations: {b:1},
       },
       {
         expansion: 'InnsAndCathedralsC3',
@@ -273,6 +304,7 @@ export class TileDatasetsService {
         sides: 'CFRF',
         image: 'Inns_And_Cathedrals_C3_Tile_J.png',
         stringRep: 'This is a tile',
+        variations: {h:1},
       },
       {
         expansion: 'InnsAndCathedralsC3',
@@ -281,6 +313,7 @@ export class TileDatasetsService {
         image: 'Inns_And_Cathedrals_C3_Tile_Ka.png',
         stringRep: 'This is a tile',
         cathedral: true,
+        variations: {b:1},
       },
       {
         expansion: 'InnsAndCathedralsC3',
@@ -289,6 +322,7 @@ export class TileDatasetsService {
         image: 'Inns_And_Cathedrals_C3_Tile_Kb.png',
         stringRep: 'This is a tile',
         cathedral: true,
+        variations: {b:1},
       },
       {
         expansion: 'InnsAndCathedralsC3',
@@ -298,6 +332,7 @@ export class TileDatasetsService {
         stringRep: 'This is a tile',
         shield: true,
         inn: true,
+        variations: {b:1},
       },
       {
         expansion: 'InnsAndCathedralsC3',
@@ -306,6 +341,7 @@ export class TileDatasetsService {
         image: 'Inns_And_Cathedrals_C3_Tile_M.png',
         stringRep: 'This is a tile',
         inn: true,
+        variations: {b:1},
       },
       {
         expansion: 'InnsAndCathedralsC3',
@@ -314,6 +350,7 @@ export class TileDatasetsService {
         image: 'Inns_And_Cathedrals_C3_Tile_N.png',
         stringRep: 'This is a tile',
         inn: true,
+        variations: {b:1},
       },
       {
         expansion: 'InnsAndCathedralsC3',
@@ -321,6 +358,7 @@ export class TileDatasetsService {
         sides: 'CCFC',
         image: 'Inns_And_Cathedrals_C3_Tile_O.png',
         stringRep: 'This is a tile',
+        variations: {f:1},
       },
       {
         expansion: 'InnsAndCathedralsC3',
@@ -329,6 +367,7 @@ export class TileDatasetsService {
         image: 'Inns_And_Cathedrals_C3_Tile_P.png',
         stringRep: 'This is a tile',
         shield: true,
+        variations: {w:1},
       },
       {
         expansion: 'InnsAndCathedralsC3',
@@ -337,6 +376,7 @@ export class TileDatasetsService {
         image: 'Inns_And_Cathedrals_C3_Tile_Q.png',
         stringRep: 'This is a tile',
         shield: true,
+        variations: {b:1},
       },
     ],
   };
@@ -352,6 +392,7 @@ export class TileDatasetsService {
         sides: 'FFSF',
         image: 'River_I_C2_Tile_A.jpg',
         stringRep: 'This is a tile',
+        variations: {b:1},
       },
       {
         expansion: 'RiverIC2',
@@ -359,6 +400,7 @@ export class TileDatasetsService {
         sides: 'CSRS',
         image: 'River_I_C2_Tile_B.jpg',
         stringRep: 'This is a tile',
+        variations: {b:1},
       },
       {
         expansion: 'RiverIC2',
@@ -366,6 +408,7 @@ export class TileDatasetsService {
         sides: 'CSCS',
         image: 'River_I_C2_Tile_C.jpg',
         stringRep: 'This is a tile',
+        variations: {b:1},
       },
       {
         expansion: 'RiverIC2',
@@ -373,6 +416,7 @@ export class TileDatasetsService {
         sides: 'SFSF',
         image: 'River_I_C2_Tile_D.jpg',
         stringRep: 'This is a tile',
+        variations: {d:1},
       },
       {
         expansion: 'RiverIC2',
@@ -380,6 +424,7 @@ export class TileDatasetsService {
         sides: 'CCSS',
         image: 'River_I_C2_Tile_E.jpg',
         stringRep: 'This is a tile',
+        variations: {w:1},
       },
       {
         expansion: 'RiverIC2',
@@ -387,6 +432,7 @@ export class TileDatasetsService {
         sides: 'SFSF',
         image: 'River_I_C2_Tile_F.jpg',
         stringRep: 'This is a tile',
+        variations: {b:1},
       },
       {
         expansion: 'RiverIC2',
@@ -394,6 +440,7 @@ export class TileDatasetsService {
         sides: 'SFFS',
         image: 'River_I_C2_Tile_G.jpg',
         stringRep: 'This is a tile',
+        variations: {f:1},
       },
       {
         expansion: 'RiverIC2',
@@ -402,6 +449,7 @@ export class TileDatasetsService {
         image: 'River_I_C2_Tile_H.jpg',
         stringRep: 'This is a tile',
         monastery: true,
+        variations: {b:1},
       },
       {
         expansion: 'RiverIC2',
@@ -409,14 +457,15 @@ export class TileDatasetsService {
         sides: 'RSSR',
         image: 'River_I_C2_Tile_I.jpg',
         stringRep: 'This is a tile',
+        variations: {h:1},
       },
       {
         expansion: 'RiverIC2',
         expId: 9,
         sides: 'FSSF',
-        garden: true,
         image: 'River_I_C2_Tile_J.jpg',
         stringRep: 'This is a tile',
+        variations: {g:1},
       },
       {
         expansion: 'RiverIC2',
@@ -424,6 +473,7 @@ export class TileDatasetsService {
         sides: 'SRSR',
         image: 'River_I_C2_Tile_K.jpg',
         stringRep: 'This is a tile',
+        variations: {b:1},
       },
       {
         expansion: 'RiverIC2',
@@ -431,6 +481,7 @@ export class TileDatasetsService {
         sides: 'SFFF',
         image: 'River_I_C2_Tile_L.jpg',
         stringRep: 'This is a tile',
+        variations: {b:1},
       },
     ],
   };
@@ -446,6 +497,7 @@ export class TileDatasetsService {
         sides: 'CRFF',
         image: 'Traders_And_Builders_C3_Tile_A.png',
         stringRep: 'This is a tile',
+        variations: {c:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
@@ -453,6 +505,7 @@ export class TileDatasetsService {
         sides: 'RRRR',
         image: 'Traders_And_Builders_C3_Tile_B.png',
         stringRep: 'This is a tile',
+        variations: {h:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
@@ -460,6 +513,7 @@ export class TileDatasetsService {
         sides: 'CFRR',
         image: 'Traders_And_Builders_C3_Tile_C.png',
         stringRep: 'This is a tile',
+        variations: {b:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
@@ -468,6 +522,7 @@ export class TileDatasetsService {
         image: 'Traders_And_Builders_C3_Tile_D.png',
         stringRep: 'This is a tile',
         wheat: true,
+        variations: {b:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
@@ -476,6 +531,7 @@ export class TileDatasetsService {
         image: 'Traders_And_Builders_C3_Tile_E.png',
         stringRep: 'This is a tile',
         wheat: true,
+        variations: {b:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
@@ -484,6 +540,7 @@ export class TileDatasetsService {
         image: 'Traders_And_Builders_C3_Tile_F.png',
         stringRep: 'This is a tile',
         wheat: true,
+        variations: {h:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
@@ -492,6 +549,7 @@ export class TileDatasetsService {
         image: 'Traders_And_Builders_C3_Tile_G.png',
         stringRep: 'This is a tile',
         wheat: true,
+        variations: {p:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
@@ -500,6 +558,7 @@ export class TileDatasetsService {
         image: 'Traders_And_Builders_C3_Tile_H.png',
         stringRep: 'This is a tile',
         wheat: true,
+        variations: {b:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
@@ -508,6 +567,7 @@ export class TileDatasetsService {
         image: 'Traders_And_Builders_C3_Tile_I.png',
         stringRep: 'This is a tile',
         wheat: true,
+        variations: {w:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
@@ -516,15 +576,16 @@ export class TileDatasetsService {
         image: 'Traders_And_Builders_C3_Tile_J.png',
         stringRep: 'This is a tile',
         monastery: true,
+        variations: {b:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
         expId: 10,
         sides: 'CCRF',
-        garden: true,
         image: 'Traders_And_Builders_C3_Tile_K.png',
         stringRep: 'This is a tile',
         cloth: true,
+        variations: {g:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
@@ -533,6 +594,7 @@ export class TileDatasetsService {
         image: 'Traders_And_Builders_C3_Tile_L.png',
         stringRep: 'This is a tile',
         cloth: true,
+        variations: {b:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
@@ -541,6 +603,7 @@ export class TileDatasetsService {
         image: 'Traders_And_Builders_C3_Tile_M.png',
         stringRep: 'This is a tile',
         cloth: true,
+        variations: {b:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
@@ -549,6 +612,7 @@ export class TileDatasetsService {
         image: 'Traders_And_Builders_C3_Tile_N.png',
         stringRep: 'This is a tile',
         cloth: true,
+        variations: {b:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
@@ -557,6 +621,7 @@ export class TileDatasetsService {
         image: 'Traders_And_Builders_C3_Tile_O.png',
         stringRep: 'This is a tile',
         cloth: true,
+        variations: {b:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
@@ -565,6 +630,7 @@ export class TileDatasetsService {
         image: 'Traders_And_Builders_C3_Tile_P.png',
         stringRep: 'This is a tile',
         wine: true,
+        variations: {b:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
@@ -573,6 +639,7 @@ export class TileDatasetsService {
         image: 'Traders_And_Builders_C3_Tile_Q.png',
         stringRep: 'This is a tile',
         wine: true,
+        variations: {b:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
@@ -581,6 +648,7 @@ export class TileDatasetsService {
         image: 'Traders_And_Builders_C3_Tile_R.png',
         stringRep: 'This is a tile',
         wine: true,
+        variations: {b:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
@@ -589,6 +657,7 @@ export class TileDatasetsService {
         image: 'Traders_And_Builders_C3_Tile_S.png',
         stringRep: 'This is a tile',
         wine: true,
+        variations: {b:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
@@ -597,15 +666,16 @@ export class TileDatasetsService {
         image: 'Traders_And_Builders_C3_Tile_T.png',
         stringRep: 'This is a tile',
         wine: true,
+        variations: {b:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
         expId: 20,
         sides: 'CRRC',
-        garden: true,
         image: 'Traders_And_Builders_C3_Tile_U.png',
         stringRep: 'This is a tile',
         wine: true,
+        variations: {b:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
@@ -614,6 +684,7 @@ export class TileDatasetsService {
         image: 'Traders_And_Builders_C3_Tile_V.png',
         stringRep: 'This is a tile',
         wine: true,
+        variations: {b:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
@@ -622,6 +693,7 @@ export class TileDatasetsService {
         image: 'Traders_And_Builders_C3_Tile_W.png',
         stringRep: 'This is a tile',
         wine: true,
+        variations: {b:1},
       },
       {
         expansion: 'TradersAndBuildersC3',
@@ -630,6 +702,7 @@ export class TileDatasetsService {
         image: 'Traders_And_Builders_C3_Tile_X.png',
         stringRep: 'This is a tile',
         wine: true,
+        variations: {f:1},
       },
     ],
   };

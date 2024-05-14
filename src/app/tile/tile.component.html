@@ -1,3 +1,4 @@
 <section class="tileDisplay">
     <a [routerLink]="[ '/tile-details',tile.expansion,tile.expId]"><img class="tileImage" src="/assets/tilePngs/{{tile.image}}" alt="{{tile.stringRep}}"></a>
+    <p *ngFor="let v of versions">{{v}}</p>
 </section>

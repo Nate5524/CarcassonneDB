@@ -1,4 +1,4 @@
-import { Component , Input} from '@angular/core';
+import { Component , Input, OnInit} from '@angular/core';
 import { Tile } from '../tile';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -10,6 +10,16 @@ import { RouterLink } from '@angular/router';
   templateUrl: './tile.component.html',
   styleUrl: './tile.component.css'
 })
-export class TileComponent{
+export class TileComponent implements OnInit{
+  versions :string[] = [];
+
   @Input() tile !: Tile;
+
+  ngOnInit(){
+    for (const [key, value] of Object.entries(this.tile.variations)) {
+      if (value != undefined){
+        this.versions.push(`${key}: ${value}`);
+      }
+    }
+  }
 }
